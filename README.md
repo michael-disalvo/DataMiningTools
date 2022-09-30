@@ -1,1 +1,1 @@
-# DataMiningTools
+# DataMiningToolsThis repo will contain tools for data mining tasks. I will start by focusing on data cleaning and pre-preprocessing tasks. It will begin as a simply util.py script but the plan is to develop it into an object-oriented tool kit whichwill have a simple and straighforward interface. 
