@@ -1,1 +1,9 @@
-# DataMiningToolsThis repo will contain tools for data mining tasks. I will start by focusing on data cleaning and pre-preprocessing tasks. It will begin as a simply util.py script but the plan is to develop it into an object-oriented tool kit whichwill have a simple and straighforward interface. 
+# preprocessor.py
+
+### How to Use
+
+### Description
+preprocessor is a class that can be used to summarize, clean rows, and select features in a pandas dataframe. 
+The structure of the class allows the user to train the processor with certain cleaning parameters, and offers 
+feedback for tuning. Once parameters are set, the processor can be used to transform any data set with the 
+same settings. 

@@ -1,7 +1,3 @@
-# Author: Michael DiSalvo
-# Acknowledgements: Dr. Natalia Khuri's my_util.py
-# Date: 9/21/2022
-
 import pandas as pd
 import numpy as np
 import os
