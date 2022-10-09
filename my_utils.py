@@ -8,6 +8,8 @@ import os
 import sklearn
 
 
+
+
 def get_filepaths(dir_path: str):
     filepaths = []
     for item in os.listdir(dir_path):

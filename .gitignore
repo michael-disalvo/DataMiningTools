@@ -1,3 +1,4 @@
-./notes.txt
-./data
-./test.ipynb
+notes.txt
+data
+test.ipynb
+__pycache__
