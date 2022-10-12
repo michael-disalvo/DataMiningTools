@@ -18,20 +18,22 @@ class Preprocessor:
         # variance: used in low variance feature removal
         # correlation: used in high correlation feature removal
     '''
-    def fit(self, thresholds: typing.Dict[str, float]):
+    def fit(self, data: pd.DataFrame, thresholds: typing.Dict[str, float]):
         self.num_std_threshold = thresholds.get('num_std', 5)
         self.variance_threshold = thresholds.get('variance', 1e-4)
         self.correlation_threshold = thresholds.get('correlation', .9)
+        self.feature_names = self.select_features(data).columns
+        print(f"selected {len(self.feature_names)} features")
 
     def transform(self, data: pd.DataFrame) -> pd.DataFrame:
         self.rows_removed = 0
         self.features_removed = 0
         nrows, ncols = data.shape
         data = self.clean_rows(data)
-        data = self.select_features(data)
+        data = data[self.feature_names]
         print(_title('REPORT:'))
         print(f"{self.rows_removed}/{nrows} rows removed")
-        print(f"{self.features_removed}/{ncols} features removed")
+        print(f"{ncols - len(self.feature_names)}/{ncols} features removed")
         return data
 
     def summary(self, data: pd.DataFrame):
